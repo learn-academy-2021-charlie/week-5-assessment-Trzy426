@@ -5,7 +5,7 @@ Standard Query Language, it is the used language for relational database managem
 
 
 2. What the PostgreSQL query that would return all the content in a particular table? 
-Select *
+SELECT * FROM table_name
 
 
 3. What is the command to create a new Rails application with a PostgreSQL database?
@@ -13,20 +13,23 @@ in the command console rails new INSERT-APP-NAME -d postgresql -T
 
 
 4. What is the command to generate a Rails model for a meals table with columns named breakfast, lunch, and dinner?
-in the command console rails generate model Meals breakfast:string lunch:string dinner:string
+in the command console rails generate model Meal breakfast:string lunch:string dinner:string
 
 5. What is a migration? Why would you use one?
 migration takes place when a developer update or creates new data on a table. migration is a file that is made and pushed to the schema.
 
 6. What is the command to generate a migration file?
+rails generate migration action_name_here
 rails db:migrate
 
 7. What is the naming convention for generating a Rails model? What is the naming convention for the table that is generated with this command?
 to generate a rails model it will be
- **Table column:data type**
+creating || upper case and singular
+table || snake case and plural
+ **Table column:datatype column:data type**
 
 8. What is the schema file in a Rails application? Can you modify the schema directly? Why or why not?
-schema is what organizes the database, no you cannot modify it directly only by migrating in a specific file
+schema is what organizes the database, no you cannot modify it directly only by migrating in a specific file, via commands like db:migrate.
 
 9. What is the Rails console?
 rails has its own built in console to interact with a database, and apply crud

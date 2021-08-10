@@ -67,10 +67,10 @@ const cipher = (string) => {
 // --------------------2) Create a function that takes in an array and returns all the words that contain the letter a.
 
 // a) Create a test with an expect statement using the variable provided.
-describe ("returnIfA", () => {
+describe ("aReturnStatement", () => {
     test('takes in an array and returns all the words that contain the letter a', () => {
-        expect(returnIfA(arrayOfWords1)).toEqual(["Apple", "Banana", "Orange"])
-        expect(returnIfA(arrayOfWords2)).toEqual(["Mango", "Apricot", "Peach"])
+        expect(aReturnStatement(arrayOfWords1)).toEqual(["Apple", "Banana", "Orange"])
+        expect(aReturnStatement(arrayOfWords2)).toEqual(["Mango", "Apricot", "Peach"])
     })
 })
 var arrayOfWords1 = ["Apple", "Banana", "Plum", "Orange", "Kiwi"]
@@ -84,10 +84,10 @@ var arrayOfWords2 = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach"]
 //create a function returnIfA
 // takes in an array 
 // using filter return if the indexOf a word is greater than -1 
-const returnIfA = (array) => {
-    return array.filter(value => value.indexOf('a')  !== -1 || value.indexOf('A') != -1)
+const aReturnStatement = (array) => {
+    return array.filter(value => value.match(/a/ig))
 }
-
+//return array.filter(value => value.indexOf('a')  !== -1 || value.indexOf('A') != -1)
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
 
 // a) Create a test with an expect statement using the variable provided.
@@ -119,22 +119,33 @@ var hand3 = [5, 5, 5, 5, 4]
 
 const isFullHouse = (array) => {
     let sortedArray = array.sort((a, b) => a - b)
-    if (sortedArray[0] === sortedArray[1]  && sortedArray[0] === sortedArray[2]){
-           if(sortedArray[3] === sortedArray[4])
+    if (sortedArray[0] === sortedArray[1]  && sortedArray[1] === sortedArray[2] &&
+        sortedArray[3] === sortedArray[4]){
+                return true              
+        }else if(sortedArray[2] === sortedArray[3]  && sortedArray[3] === sortedArray[4] && 
+            sortedArray[0] === sortedArray[1]){
                 return true
-            else{  
-                return false
-            }                
-        }else if(sortedArray[2] === sortedArray[3]  && sortedArray[2] === sortedArray[4])
-            if(sortedArray[0] === sortedArray[1])
-                return true
-            else{
-                return false
-            }
-        else{
-        return false                
+            }else{
+            return false                
         }    
 }
+//Also you could use regex to search for like pairs and triples
+
+// if (sortedArray[0] === sortedArray[1]  && sortedArray[0] === sortedArray[2] || sortedArray[2] === sortedArray[3]  && sortedArray[2] === sortedArray[4]){
+//     if(sortedArray[3] === sortedArray[4])
+//          return true
+//      else{  
+//          return false
+//      }                
+//  }else if(sortedArray[2] === sortedArray[3]  && sortedArray[2] === sortedArray[4])
+//      if(sortedArray[0] === sortedArray[1])
+//          return true
+//      else{
+//          return false
+//      }
+//  else{
+//  return false                
+//  }
 
 // sortedArray = array.sort((a, b) => a - b)
 // for (let i = 0; i < sortedArray.length; i++) {

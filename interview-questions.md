@@ -7,7 +7,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. Rails follows an MVC pattern. What does that mean?
 
-  Your answer:MVC stans for, models, controllers, and views. its a pattern of designing used in rails.
+  Your answer:MVC stands for, models, controllers, and views. its a pattern of designing used in rails.
 
   Researched answer: MVC, or model,controller,view pattern is a pattern that contains 3 core architecture. models is used for handling logi, and data. controllers are for handling user interface, and views is for handling the graphical user interface objects. 
 
@@ -25,7 +25,10 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: ORM is used to relate incompatible systems using object oriented programming. 
 
-  Researched answer:ORM in CS is a programming technique that converts data from a non compatible type and relates them using OOP this createes a virtual database for a system to work from. 
+  Researched answer:Object relational mapping - ORM is how we the user can take complicated quries and in our own programming language query a relational data base. This is done through a mapper or a library that takes what we are querying and allows us the end user to get understandable information from that same database. This is done by creating a object, and then setting key value pairs for properties you want the database to access. This virtual database then can be accessed by us using objects(written in your preferrred language) but is also understandable to a computer(translated to SQL).
+  
+  
+  ORM in CS is a programming technique that converts data from a non compatible type and relates them using OOP this createes a virtual database for a system to work from.** Original statement ** 
 
 
 
@@ -48,12 +51,12 @@ Then, research the question to expand on your answer. Even if you feel you have 
 ## Looking Ahead: Terms for Next Week
 Research and define the following terms to the best of your ability.
 
-1. RESTful routes:
+1. RESTful routes: respresentational state transfer predefined behaviour via https requests
 
-2. JSON:
+2. JSON:javscript object notation. format that uses readable text, to interpolate data using keys and arrays.
 
-3. ERB:
+3. ERB: enbedded ruby ruby template that uses plain text and ruby code.
 
-4. Params:
+4. Params: a way to pass extra info to the controller
 
-5. API:
+5. API:application programing interface, how computers talk to each other, website for a computer.
